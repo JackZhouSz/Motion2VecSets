@@ -1,6 +1,6 @@
 # Basic 
 type: DT4D
-dataset_path: /mnt/hdd/motion_animal
+dataset_path: DT4D
 mode: diff
 stage: deform
 repeat: 1 # enlarge the dataset by repeating the data, 1 -> no repeat
@@ -22,10 +22,10 @@ time_attn: True
 is_corr: False
 
 shape_ae_model: kl_d512_m512_l8
-shape_ae_model_path: ./ckpts/DT4D/dt4d_shape_ae.pth
+shape_ae_model_path: ./ckpts/DT4D/vae/dt4d_shape_ae.pth
 
 deform_ae_model: kl_d512_m512_l32
-deform_ae_model_path: ./ckpts/DT4D/dt4d_deform_ae.pth
+deform_ae_model_path: ./ckpts/DT4D/vae/dt4d_deform_ae.pth
 
 diff_model: surf512_edm
 

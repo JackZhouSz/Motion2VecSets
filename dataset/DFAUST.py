@@ -225,19 +225,18 @@ class DFAUST(Dataset):
         surface = data["pointcloud"]
 
         ind = np.random.default_rng().choice(surface.shape[1], self.pc_size, replace=False)
-        ind2 = np.random.default_rng().choice(surface.shape[1], self.pc_size, replace=False)
         
-        surface_src_corr = surface[0,ind,:]
-        surface_tgt_corr = surface[1,ind,:]
+        # surface_src_corr = surface[0,ind,:]
+        # surface_tgt_corr = surface[1,ind,:]
         
         surface_src = surface[0,ind,:]
-        surface_tgt = surface[1,ind2,:]
+        surface_tgt = surface[1,ind,:]
         
         surface_src = torch.from_numpy(surface_src)
         surface_tgt = torch.from_numpy(surface_tgt)
         
-        surface_src_corr = torch.from_numpy(surface_src_corr)
-        surface_tgt_corr = torch.from_numpy(surface_tgt_corr)
+        # surface_src_corr = torch.from_numpy(surface_src_corr)
+        # surface_tgt_corr = torch.from_numpy(surface_tgt_corr)
 
         near_points = data['points_nearsuf'] # near surface points
 
@@ -249,8 +248,8 @@ class DFAUST(Dataset):
         near_points_src = torch.from_numpy(near_points_src)
         near_points_tgt = torch.from_numpy(near_points_tgt)
         
-        points_src = torch.cat([surface_src_corr, near_points_src], dim=0)
-        points_tgt = torch.cat([surface_tgt_corr, near_points_tgt], dim=0)
+        points_src = torch.cat([surface_src, near_points_src], dim=0)
+        points_tgt = torch.cat([surface_tgt, near_points_tgt], dim=0)
 
         model_data = {}
   

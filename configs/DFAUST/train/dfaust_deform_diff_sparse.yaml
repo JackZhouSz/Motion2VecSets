@@ -1,6 +1,6 @@
 # Basic 
 type: DFAUST
-dataset_path: /mnt/hdd/motion/DFAUST_mesh/
+dataset_path: DFAUST
 mode: diff
 stage: deform
 repeat: 1 # enlarge the dataset by repeating the data, 1 -> no repeat

@@ -1,5 +1,5 @@
 type: DFAUST
-dataset_path: /mnt/hdd/motion/DFAUST_mesh/
+dataset_path: DFAUST
 mode: diff
 stage: shape
 repeat: 1 # enlarge the dataset by repeating the data, 1 -> no repeat
@@ -14,7 +14,7 @@ use_depth: True
 
 # Model setting
 ae_model: kl_d512_m512_l8 
-ae_model_path: ./ckpts/DFAUST/dfaust_shape_ae.pth
+ae_model_path: ./ckpts/DFAUST/vae/dfaust_shape_ae.pth
 diff_model: surf300_edm
 kl_weight: 0.001
 

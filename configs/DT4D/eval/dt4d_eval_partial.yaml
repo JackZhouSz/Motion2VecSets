@@ -22,13 +22,13 @@ time_attn: True
 is_corr: False
 # always input something like dX_mX_lX with kl_ prefix for kl loss
 ae_model: kl_d512_m512_l8
-ae_model_path: ./ckpts/DT4D/dt4d_shape_ae.pth
+ae_model_path: ./ckpts/DT4D/vae/dt4d_shape_ae.pth
 deform_ae_model: kl_d512_m512_l32
-deform_ae_model_path: ./ckpts/DT4D/dt4d_deform_ae.pth
+deform_ae_model_path: ./ckpts/DT4D/vae/dt4d_deform_ae.pth
 
 diff_model: surf512_edm
-diff_model_path: ./ckpts/DT4D/dt4d_shape_diff_partial.pth
-deform_diff_model_path: ./ckpts/DT4D/dt4d_deform_diff_partial.pth
+diff_model_path: ./ckpts/DT4D/partial/dt4d_shape_diff_partial.pth
+deform_diff_model_path: ./ckpts/DT4D/partial/dt4d_deform_diff_partial.pth
 
 # From which (if you want to resume or load ckpt)
 resume: False

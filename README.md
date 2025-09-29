@@ -36,7 +36,7 @@ We present <b
 
 ## Install
 
-Install the environment following `scripts/init_environment.sh`, to install with cuda 11.0, use the command `bash scripts/init_environment.sh`
+Install the environment following `scripts/init_environment.sh`, to install with cuda 11.0, use the command `bash script/init_environment.sh`
 
 ## Data preparation and Pretrained models
 

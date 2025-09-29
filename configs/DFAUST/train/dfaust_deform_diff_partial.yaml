@@ -1,6 +1,6 @@
 # Basic 
 type: DFAUST
-dataset_path: /mnt/hdd/motion/DFAUST_mesh/
+dataset_path: DFAUST
 mode: diff
 stage: deform
 repeat: 1 # enlarge the dataset by repeating the data, 1 -> no repeat
@@ -22,10 +22,10 @@ time_attn: True
 is_corr: False
 
 shape_ae_model: kl_d512_m512_l8
-shape_ae_model_path: ./ckpts/DFAUST/dfaust_shape_ae.pth
+shape_ae_model_path: ./ckpts/DFAUST/vae/dfaust_shape_ae.pth
 
 deform_ae_model: kl_d512_m512_l32
-deform_ae_model_path: ./ckpts/DFAUST/dfaust_deform_ae.pth
+deform_ae_model_path: ./ckpts/DFAUST/vae/dfaust_deform_ae.pth
 
 diff_model: surf300_edm
 

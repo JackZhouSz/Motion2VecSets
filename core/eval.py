@@ -297,8 +297,8 @@ def main():
                     eval_df.to_csv(out_file_temp)
                     eval_df_t = pd.DataFrame(test_results_t)
                     eval_df_t.to_csv(out_file_temp_t)
-                    eval_df.loc['mean'] = eval_df.mean()
-                    eval_df_t.loc['mean'] = eval_df_t.mean()
+                    eval_df.loc['mean'] = eval_df.mean(numeric_only=True)
+                    eval_df_t.loc['mean'] = eval_df_t.mean(numeric_only=True)
                     iou_cols = [c for c in  eval_df.columns if 'iou' in c]
                     print('Mean IoU: ', eval_df[iou_cols].mean().mean())
                     chamfer_cols = [c for c in  eval_df.columns if 'chamfer-L1(Onet)' in c]
